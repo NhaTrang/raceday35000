@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   resources :racers
-  root to: ’racers#index’
+  root to: 'racers#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

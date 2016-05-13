@@ -9,6 +9,10 @@ Bundler.require(*Rails.groups)
 module Raceday
   class Application < Rails::Application
     
+    #This is used by stand-alone programs like “rails console” to be able to load the Mongoid environment with fewer steps. 
+    #This also configures which ORM your scaffold commands use by default. 
+    #Adding the mongoid gem had the impact of making Mongoid the default ORM. 
+        
     Mongoid.load!('./config/mongoid.yml')
     
     #which default ORM are we using with scaffold
